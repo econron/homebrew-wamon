@@ -5,13 +5,13 @@
 class Wamon < Formula
   desc "CLI tool related to WAON points or services"
   homepage "https://github.com/econron/wamon"
-  version "0.2.7"
+  version "0.2.8"
   license "MIT"
 
   on_macos do
     on_intel do
-      url "https://github.com/econron/wamon/releases/download/v0.2.7/wamon_Darwin_x86_64.tar.gz"
-      sha256 "9eedd5a502c00f1d18f3298825e7a182e808bf872e43506da3a16255010a5746"
+      url "https://github.com/econron/wamon/releases/download/v0.2.8/wamon_Darwin_x86_64.tar.gz"
+      sha256 "622cc9b1d7964f805bed3af1c67c7a78f473426c8327062eabd6602f87a61409"
 
       def install
         bin.install "wamon"
@@ -23,8 +23,8 @@ class Wamon < Formula
       end
     end
     on_arm do
-      url "https://github.com/econron/wamon/releases/download/v0.2.7/wamon_Darwin_arm64.tar.gz"
-      sha256 "71748b13ee974561bff7c7aec298dde6ec0ba61693af56cd36eb7163a5d6ce3b"
+      url "https://github.com/econron/wamon/releases/download/v0.2.8/wamon_Darwin_arm64.tar.gz"
+      sha256 "0b8b2a66f9f04bacc57c8747925f044fb0324e70718818ef95d3ece130c1ade1"
 
       def install
         bin.install "wamon"
@@ -40,8 +40,8 @@ class Wamon < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/econron/wamon/releases/download/v0.2.7/wamon_Linux_x86_64.tar.gz"
-        sha256 "c823d83d43fe1ebf12c4a84e9cf8220231182dc2996caf47abfe559e96ca672f"
+        url "https://github.com/econron/wamon/releases/download/v0.2.8/wamon_Linux_x86_64.tar.gz"
+        sha256 "66a2292cb38ac53c80d761f63ee043311ef6dc845146e0c07433cb57bd99499d"
 
         def install
           bin.install "wamon"
@@ -55,8 +55,8 @@ class Wamon < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/econron/wamon/releases/download/v0.2.7/wamon_Linux_arm64.tar.gz"
-        sha256 "a628df6640cbdec7a2912ec64639d672541936bc46a61f4b2d3fef1d0ef64af7"
+        url "https://github.com/econron/wamon/releases/download/v0.2.8/wamon_Linux_arm64.tar.gz"
+        sha256 "1f709ea252825f518bc1a6dbe80b0b2ffbc49dd4bd2db99986f023fd992d625e"
 
         def install
           bin.install "wamon"
