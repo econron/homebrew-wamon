@@ -5,13 +5,13 @@
 class Wamon < Formula
   desc "CLI tool related to WAON points or services"
   homepage "https://github.com/econron/wamon"
-  version "0.2.2"
+  version "0.2.3"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/econron/wamon/releases/download/v0.2.2/wamon_Darwin_x86_64.tar.gz"
-      sha256 "135358d7465b4d9992319bd3708d341ae01cb09cc2b478699495a824b86b3c4d"
+      url "https://github.com/econron/wamon/releases/download/v0.2.3/wamon_Darwin_x86_64.tar.gz"
+      sha256 "1a02dc1fedec1a93dcfc1f4cce3257600feb916443cce013a502922dad38078d"
 
       def install
         bin.install "wamon"
@@ -23,8 +23,8 @@ class Wamon < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/econron/wamon/releases/download/v0.2.2/wamon_Darwin_arm64.tar.gz"
-      sha256 "a175e314a358fd0537a53ac0961660d299697f2c52464404c1b2234d5693a869"
+      url "https://github.com/econron/wamon/releases/download/v0.2.3/wamon_Darwin_arm64.tar.gz"
+      sha256 "d70f43381f6336e0b1d319e3d4bcbd46866d6a55cbc9f62c2d94fbcef3d77a81"
 
       def install
         bin.install "wamon"
@@ -40,8 +40,8 @@ class Wamon < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/econron/wamon/releases/download/v0.2.2/wamon_Linux_x86_64.tar.gz"
-        sha256 "2e112bd1c3798c535ad5268557efabb0e30c0260fdad94ccaba4cbf2418519c5"
+        url "https://github.com/econron/wamon/releases/download/v0.2.3/wamon_Linux_x86_64.tar.gz"
+        sha256 "48f9d5111bd10b7bd08a7ecae1bf8e04c2e86f431da2bc0db58fc95bf817f0b2"
 
         def install
           bin.install "wamon"
@@ -55,8 +55,8 @@ class Wamon < Formula
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/econron/wamon/releases/download/v0.2.2/wamon_Linux_arm64.tar.gz"
-        sha256 "adca19acf95cfc32f895b6224606b23e45616ec39bd2f9bb1a8c8cbaaf41bd74"
+        url "https://github.com/econron/wamon/releases/download/v0.2.3/wamon_Linux_arm64.tar.gz"
+        sha256 "77ec0a2a0e5ef1817d1046dd5e505e47d15821a729e419c91baa4280afa28cb9"
 
         def install
           bin.install "wamon"
