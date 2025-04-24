@@ -11,7 +11,7 @@ class Wamon < Formula
   on_macos do
     on_intel do
       url "https://github.com/econron/wamon/releases/download/v0.2.7/wamon_Darwin_x86_64.tar.gz"
-      sha256 "1b5c9acd4bee231d2541acce882afd1c7a6e67978c4caf274d2710a343ef176b"
+      sha256 "9eedd5a502c00f1d18f3298825e7a182e808bf872e43506da3a16255010a5746"
 
       def install
         bin.install "wamon"
@@ -24,7 +24,7 @@ class Wamon < Formula
     end
     on_arm do
       url "https://github.com/econron/wamon/releases/download/v0.2.7/wamon_Darwin_arm64.tar.gz"
-      sha256 "f19d641cef01c1300f4013bc1bc475f655ef66fe33ed86561d27ec556024756d"
+      sha256 "71748b13ee974561bff7c7aec298dde6ec0ba61693af56cd36eb7163a5d6ce3b"
 
       def install
         bin.install "wamon"
@@ -41,7 +41,7 @@ class Wamon < Formula
     on_intel do
       if Hardware::CPU.is_64_bit?
         url "https://github.com/econron/wamon/releases/download/v0.2.7/wamon_Linux_x86_64.tar.gz"
-        sha256 "0923cac108dad8213ddbd9c1d7f38440bf1989932ef539295d825abb5f62a64b"
+        sha256 "c823d83d43fe1ebf12c4a84e9cf8220231182dc2996caf47abfe559e96ca672f"
 
         def install
           bin.install "wamon"
@@ -56,7 +56,7 @@ class Wamon < Formula
     on_arm do
       if Hardware::CPU.is_64_bit?
         url "https://github.com/econron/wamon/releases/download/v0.2.7/wamon_Linux_arm64.tar.gz"
-        sha256 "2ff2b6a923c15fac8bca4dfb30016968000e560e077be61476413a4ba20a9aba"
+        sha256 "a628df6640cbdec7a2912ec64639d672541936bc46a61f4b2d3fef1d0ef64af7"
 
         def install
           bin.install "wamon"
@@ -71,9 +71,12 @@ class Wamon < Formula
   end
 
   test do
-    # 例1: ヘルプコマンドがエラーなく実行できればOKとする
-    system "#{bin}/wamon", "--help"
-    # 例2: バージョンコマンドの出力に特定の文字列が含まれるか確認する
+    # system コマンドのパス指定を推奨スタイルに変更
+    system bin/"wamon", "--help"
+
+    # shell_output はコマンド全体を文字列として渡すため、
+    # こちらは "#{bin}/wamon --version" のままでも audit で指摘されないことが多いです。
+    # もしこちらも指摘されるようであれば、別のテスト方法を検討します。
     assert_match "wamon version", shell_output("#{bin}/wamon --version")
   end
 end
