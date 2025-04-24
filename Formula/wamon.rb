@@ -11,7 +11,7 @@ class Wamon < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/econron/wamon/releases/download/v0.2.2/wamon_Darwin_x86_64.tar.gz"
-      sha256 "7f237f1caabfa09e12af2c6ec373fe1cfa1a5fe19468f0b1d04eabd0303ef019"
+      sha256 "135358d7465b4d9992319bd3708d341ae01cb09cc2b478699495a824b86b3c4d"
 
       def install
         bin.install "wamon"
@@ -24,7 +24,7 @@ class Wamon < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/econron/wamon/releases/download/v0.2.2/wamon_Darwin_arm64.tar.gz"
-      sha256 "ea8f282f70a706365fc932532c92baaba88f649d3005fcb31575d83efdce22fa"
+      sha256 "a175e314a358fd0537a53ac0961660d299697f2c52464404c1b2234d5693a869"
 
       def install
         bin.install "wamon"
@@ -41,7 +41,7 @@ class Wamon < Formula
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
         url "https://github.com/econron/wamon/releases/download/v0.2.2/wamon_Linux_x86_64.tar.gz"
-        sha256 "52a0e1d604b4a7e4bbc83b8734bf6218c67baf325c19b4bd26965a98115dc5c5"
+        sha256 "2e112bd1c3798c535ad5268557efabb0e30c0260fdad94ccaba4cbf2418519c5"
 
         def install
           bin.install "wamon"
@@ -56,7 +56,7 @@ class Wamon < Formula
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
         url "https://github.com/econron/wamon/releases/download/v0.2.2/wamon_Linux_arm64.tar.gz"
-        sha256 "7d215302c86bdded9e7e1015428bbcb270c0191ccbd6551f9dc08de74cdf8c2f"
+        sha256 "adca19acf95cfc32f895b6224606b23e45616ec39bd2f9bb1a8c8cbaaf41bd74"
 
         def install
           bin.install "wamon"
